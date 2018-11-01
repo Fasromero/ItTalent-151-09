@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- <link rel="icon" href="../images/favicon.ico"> -->
+	<title>COOLturízate - Definición de actividades</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->	
+	<!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico"/> -->
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../../framework/bootstrap/fonts/font-awesome-4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../../framework/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="../fonts/Linearicons-Free-v1.0.0/icon-font.min.css"> -->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../../framework/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../../framework/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../../framework/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../../framework/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../../framework/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--===============================================================================================-->
+
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title">
+					<span class="login100-form-title-1">
+						<style>
+							img {
+								float: left;
+							}
+						</style>
+						<img src="../img/logo1.png">
+						Programa COOLturízate
+						<p></p>
+						</p></h>
+						Actualización de actividades
+					</span>
+				</div>
+
+				<form class="login100-form validate-form">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Por favor asigne un nombre para la actividad">
+						<span class="label-input100">Nombre:  </span>
+						<input class="input100" type="text" id="nomactiv_txt" placeholder="Nombre de actividad">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate = "Se requiere una descripción">
+						<span class="label-input100">Descripción</span>
+						<input class="input100" type="text" id="desactiv_txt" placeholder="Descripción">
+						<span class="focus-input100"></span>
+					</div>
+
+					<!-- <input class="input100" type="date" style="width:200px;" id="f1_txt" placeholder="2018-10-01"> -->
+					<div class="wrap-input100 validate-input m-b-26" data-validate = "Debe registrar las fechas">
+						<span class="label-input100">Fechas de : </span>
+						<input class="input100" type="date" style="width:200px;" id="f1_txt" placeholder="2018-10-01">
+						<span class="focus-input100"></span>
+						<span class="label-input100" >a: </span>
+						<input class="input100" type="date" id="f2_txt" placeholder="2018-10-31">
+						<span class="focus-input100"></span>
+					</div>
+
+					<select class="wrap-input100 validate-input m-b-26" id="estado_cbo">
+						<span class="label-input100">Estado: </span>
+						<option value="Activo">Activo</option>
+						<option value="Cancelado">Cancelado</option>
+						<option value="Postergado">Postergado</option>
+						<option value="Terminado">Terminado</option>
+					</select>
+
+					<div id="test">
+						<span class="label-input100">Valor</span>
+						<input class="input100" type="text" id="valor_txt" placeholder="Valor">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-26" data-validate = "Por favor registre una condición">
+						<span class="label-input100">Condición</span>
+						<input class="input100" type="text" id="condic_txt" placeholder="Condición">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate = "Debe registrar las fechas">
+						<span class="label-input100">Inscripción de: </span>
+						<input class="input100" type="date" id="f1ins_txt" placeholder="2018-10-01">
+						<span class="focus-input100"></span>
+						<span class="label-input100" >a: </span>
+						<input class="input100" type="date" id="f2ins_txt" placeholder="2018-10-31">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate = "Registre una dirección web">
+						<span class="label-input100">Sitio web para imagen: </span>
+						<input class="input100" type="text" id="url_txt" placeholder="http://">
+						<span class="focus-input100"></span>
+					</div>
+
+					<span class="label-input100">Categoría: </span>
+					<select class="wrap-input100 validate-input m-b-26" id="categoria_cbo">
+						<option value="U_Conciertos">Únicos: Conciertos</option>
+						<option value="U_ExpoArte">Únicos: Exposiciones de arte</option>
+						<option value="U_ObrasTeatro">Únicos: Obras teatrales</option>
+						<option value="U_Conciertos">Recurrentes: Clubes de lectura en biblioteca</option>
+						<option value="U_ExpoArte">Recurrentes: Conciertos</option>
+						<option value="U_ObrasTeatro">Convocatoria: Inscripción</option>
+					</select>
+
+					<div class="container-login100-form-btn">
+						<!--<button class="login100-form-btn">-->
+						<button class="login100-form-btn" onclick="validarDefActivs()">
+							Registrar
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="../../framework/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../../framework/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../../framework/vendor/bootstrap/js/popper.js"></script>
+	<script src="../../framework/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../../framework/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../../framework/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../../framework/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../../framework/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../js/main.js"></script>
+<!--===============================================================================================-->
+	<script src="../js/maincool.js"></script>
+	
+</body>
+</html>
